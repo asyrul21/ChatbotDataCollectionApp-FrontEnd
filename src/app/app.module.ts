@@ -5,16 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    HeaderComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

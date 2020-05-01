@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 // import { Headers } from '@angular/http';
 
 import { HttpClient } from '@angular/common/http';
-
-// import map
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Question } from 'src/models/Question';
 
@@ -16,13 +13,15 @@ export class QuestionsService {
     }
 
     getQuestions(): Observable<Question[]> {
-        return this.http.get<Question[]>('http://localhost:3000/api/questions');
+        return this.http.get<Question[]>('https://chatbot-data-collection-api.herokuapp.com/api/questions');
     }
 
     addQuestion(question: Question): Observable<Question> {
         var headers = new Headers();
-        // headers.append('Content-Type', 'application/json');
-        return this.http.post<Question>('http://localhost:3000/api/questions', question);
+        return this.http.post<Question>('https://chatbot-data-collection-api.herokuapp.com/api/questions', question);
     }
 
+    getDownloadLink(): string {
+        return "https://chatbot-data-collection-api.herokuapp.com/api/getcsv";
+    }
 }
