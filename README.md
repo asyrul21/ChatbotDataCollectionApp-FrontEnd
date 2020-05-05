@@ -28,6 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Guide on How to Deploy Angular on Heroku
 
+Reference: https://medium.com/better-programming/how-to-deploy-your-angular-9-app-to-heroku-in-minutes-51d171c2f0d
+
 1. Build your app to production
 ```bash
 ng build --prod
@@ -67,7 +69,8 @@ node server.js
 "start": "node server.js"
 ```
 
-6. Create Heroku app
+6. Create Heroku app and push
 ```bash
 heroku create chatbot-data-collection-ui
+git push heroku master
 ```

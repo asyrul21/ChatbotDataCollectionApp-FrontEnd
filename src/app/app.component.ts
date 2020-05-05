@@ -8,7 +8,7 @@ import { QuestionsService } from './components/questions/questions.service';
   providers: [QuestionsService]
 })
 export class AppComponent {
-  title = 'client';
+  title = 'Chatbot Data Collection App';
 
   constructor() {
 
