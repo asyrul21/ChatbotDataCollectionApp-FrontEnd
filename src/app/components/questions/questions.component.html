@@ -1,25 +1,32 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form (ngSubmit)="onSubmit()" #f="ngForm">
-                <div class="form-group">
-                    <input type="text" ngModel name="question" class="form-control" placeholder="How are you?" required
-                        #question="ngModel">
+            <div *ngIf="submitted" class="alert alert-success" role="alert" style="text-align: center;">Thank you! Send
+                more questions!
+            </div>
+            <form (ngSubmit)="onSubmit()" #f="ngForm" style="width: 80%;margin: 0 auto;margin-top: 10px;">
+                <div class="form-group col-md-8">
+                    <input type="text" ngModel name="question" class="form-control"
+                        placeholder="Type your question here" required #question="ngModel">
                 </div>
-                <button type="button" (click)="onHelp()" class="btn link helpButton">I would like to help with the
-                    labelling!</button>
-                <div *ngIf="showLabel" class="form-group">
+                <!-- <button *ngIf="!showLabel" type="button" (click)="onHelp()" class="btn link helpButton">I would like to
+                    help with the
+                    labelling!</button> -->
+                <div class="form-group col-md-4">
                     <select id="label" class="form-control" ngModel name="label">
-                        <option value="">Help me label!</option>
+                        <option value="">Help me label</option>
                         <option *ngFor="let label of labels" [value]="label.value">{{ label.text}}</option>
                     </select>
                 </div>
-                <button class="btn btn-primary" type="submit" style="width: 100%;" [disabled]="!f.valid">Send!</button>
+                <div class="form-group col-md-12">
+                    <button class="btn btn-primary " type="submit" style="width: 100%;"
+                        [disabled]="!f.valid">Send!</button>
+                </div>
             </form>
         </div>
     </div>
     <hr>
-    <div class="task-list">
+    <!-- <div class="task-list">
         <div *ngFor="let q of questions">
             <div class="col-md-10">
                 {{ q.input }}
@@ -28,7 +35,7 @@
                 {{ q.label }}
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 

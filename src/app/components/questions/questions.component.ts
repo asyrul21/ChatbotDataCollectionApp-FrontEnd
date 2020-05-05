@@ -32,7 +32,27 @@ export class QuestionsComponent implements OnInit {
   {
     value: "ST:identity",
     text: "Identity"
-  }]
+  },
+  {
+    value: "ST:negative",
+    text: "Negative"
+  },
+  {
+    value: "ST:greeting",
+    text: "Greeting"
+  },
+  {
+    value: "ST:goodbye",
+    text: "Goodbye"
+  },
+  {
+    value: "ST:thank",
+    text: "Thank"
+  },
+  {
+    value: "ST:option",
+    text: "Ability"
+  },]
 
   constructor(private qService: QuestionsService) {
     this.qService.getQuestions().subscribe(questions => {

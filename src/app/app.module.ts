@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionsComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,
