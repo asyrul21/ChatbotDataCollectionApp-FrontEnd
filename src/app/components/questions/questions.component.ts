@@ -72,7 +72,7 @@ export class QuestionsComponent implements OnInit {
   onSubmit() {
     // set attributes to form input
     this.question.input = this.questionForm.value.question;
-    this.question.label = this.questionForm.value.label;
+    this.question.label = this.questionForm.value.label ? this.questionForm.value.label : '';
 
     this.submitted = true;
     this.qService.addQuestion(this.question).subscribe(
