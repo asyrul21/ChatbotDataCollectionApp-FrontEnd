@@ -25,7 +25,8 @@ export class QuestionsComponent implements OnInit {
   labels = [{
     value: "ST:mood",
     text: "Mood"
-  }, {
+  },
+  {
     value: "ST:origin",
     text: "Origin"
   },
@@ -52,7 +53,27 @@ export class QuestionsComponent implements OnInit {
   {
     value: "ST:option",
     text: "Ability"
-  },]
+  },
+  {
+    value: "ST:tmol",
+    text: "Life"
+  },
+  {
+    value: "ST:age",
+    text: "Age"
+  },
+  {
+    value: "ST:positive",
+    text: "Positive"
+  },
+  {
+    value: "DR:createWorkflow",
+    text: "CreateWorkflow"
+  },
+  {
+    value: "ST:notfound",
+    text: "Unrelated"
+  }]
 
   constructor(private qService: QuestionsService) {
     this.qService.getQuestions().subscribe(questions => {
